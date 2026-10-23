@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crimson</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="tabstrip">
+      <div id="tabs" class="tabs" role="tablist"></div>
+      <button id="newtab" class="ibtn" title="New tab (Alt+T)" aria-label="New tab">+</button>
+    </div>
+
+    <div class="toolbar">
+      <button id="back" class="ibtn" title="Back" aria-label="Back">‹</button>
+      <button id="forward" class="ibtn" title="Forward" aria-label="Forward">›</button>
+      <button id="reload" class="ibtn" title="Reload (Alt+R)" aria-label="Reload">⟳</button>
+      <button id="home" class="ibtn" title="Home" aria-label="Home">⌂</button>
+
+      <form id="omnibox" class="omnibox" role="search">
+        <input id="address" type="text" placeholder="Search or enter address" autocomplete="off"
+               autocapitalize="off" spellcheck="false" enterkeyhint="go" aria-label="Address" />
+      </form>
+
+      <button id="star" class="ibtn" title="Bookmark this page" aria-label="Bookmark" aria-pressed="false">☆</button>
+      <button id="open-bookmarks" class="ibtn" title="Bookmarks" aria-label="Bookmarks">▤</button>
+      <button id="open-history" class="ibtn" title="History" aria-label="History">◷</button>
+      <button id="open-settings" class="ibtn" title="Settings" aria-label="Settings">⚙</button>
+    </div>
+
+    <div class="loadbar" id="loadbar"></div>
+
+    <main id="viewport" class="viewport">
+      <section id="home-view" class="home">
+        <h1 class="logo">Crimson</h1>
+        <p class="tag">A private browser that runs on your own server.</p>
+        <form id="home-form" class="home-search">
+          <input id="home-input" type="text" placeholder="Search or enter address" autocomplete="off"
+                 autocapitalize="off" spellcheck="false" aria-label="Search" />
+        </form>
+        <div id="quick" class="quick"></div>
+      </section>
+    </main>
+
+    <p id="status" class="status" role="status" hidden></p>
+  </div>
+
+  <dialog id="panel" class="panel">
+    <header>
+      <h2 id="panel-title"></h2>
+      <button id="panel-close" class="ibtn" aria-label="Close">✕</button>
+    </header>
+    <div id="panel-body"></div>
+  </dialog>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
